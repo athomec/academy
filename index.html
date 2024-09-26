@@ -83,7 +83,7 @@
                 </ul>
             </div>
             <div class="top-user">
-                <a href="#" title="登入/註冊" class="top-login btn basic-btn rounded-pill ">
+                <a href="#" title="登入/註冊" class="top-login btn basic-btn rounded-pill " data-bs-toggle="modal" data-bs-target="#login">
                     登入 / 註冊
                 </a>
                 <!--已登入資訊-->
@@ -99,7 +99,74 @@
 <!--主選單結束-->
 				<a href="#Accesskey_C" class="key position-absolute" id="Accesskey_C" accesskey="C"
 					title="網頁主要內容資料區">:::</a>					
-				<!--內容區塊開始-->
+				<!--視窗開始-->
+<div class="modal fade" id="login" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="exampleModalLabel">會員登入</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" title="關閉視窗">
+					<img src="./assets/images/ic-close-dark.svg" alt="icon">
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row justify-content-center">
+					<div class="col-sm-10 col-md-9">
+						<div class="row g-3 align-items-center w-100">
+							<div class="col-auto">
+								<label for="mail" class="col-form-label">
+									<img src="./assets/images/ic-mail.svg" alt="icon">
+								</label>
+							</div>
+							<div class="col-auto flex-grow-1">
+								<input type="email" id="mail" class="form-control" title="輸入e-mail" placeholder="請輸入電子信箱帳號">
+							</div>
+						</div>
+						<div class="row g-3 align-items-center w-100">
+							<div class="col-auto">
+								<label for="password" class="col-form-label">
+									<img src="./assets/images/ic-key.svg" alt="icon">
+								</label>
+							</div>
+							<div class="col-auto flex-grow-1">
+								<input type="password" id="password" class="form-control" title="輸入密碼" placeholder="請輸入密碼">
+							</div>
+						</div>
+						<div class="row g-3 align-items-center w-100">
+							<div class="col-auto">
+								<label for="verification" class="col-form-label text-white" style="width: 30px;height: 44px;">
+									<div class="d-none">驗證碼</div>
+								</label>
+							</div>
+							<div class="col-auto flex-grow-1">
+								<input type="text" id="verification" class="form-control" title="輸入驗證碼" placeholder="請輸入驗證碼">
+							</div>
+						</div>
+						<div class="row gx-0 gy-3 align-items-center w-100 mb-3">
+							<div class="col d-flex align-items-center pt-2">
+								<img src="./assets/images/code-demo.jpg" alt="驗證碼" style="padding-left: 46px;">
+								<button class="btn link-img" title="重整"><img src="./assets/images/ic-refresh.svg" alt="icon"></button>
+								<button class="btn link-img" title="播放"><img src="./assets/images/ic-speaker.svg" alt="icon"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer d-flex flex-column justify-content-center border-0">
+				<div class="d-flex mb-3">
+				<button type="button" class="btn cancel-btn fs-6 px-5 py-2 me-3" title="取消" data-bs-dismiss="modal">取消</button>
+				<button type="button" class="btn basic-btn fs-6 px-5 py-2" title="登入">登入</button>
+				</div>
+				<div class="d-flex">
+					<a href="#" title="忘記密碼" class="link-underline-gray-700 fs-7 me-4">忘記密碼</a>
+					<a href="#" title="註冊去" class="link-underline-gray-700 fs-7">尚無帳號，註冊去</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--視窗結束-->
+<!--內容區塊開始-->
 <main class="main">
 	<div class="banner g-4 js-banner">
 		<div class="banner-item">

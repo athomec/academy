@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.002" height="30" viewBox="0 0 30.002 30">
+  <g id="ic-speaker" transform="translate(-1700 711)">
+    <g id="speaker" transform="translate(745.914 -1578.767)">
+      <path id="Path_1293" data-name="Path 1293" d="M960.529,875.879v.005l10.6-6.117v25.927l-10.6-6.118h-6.443v-13.7Z" fill="#333"/>
+      <path id="Path_1294" data-name="Path 1294" d="M1021.71,892.913a9.837,9.837,0,0,1-2.64,6.718l1.2,1.181a11.544,11.544,0,0,0,0-15.8l-1.2,1.181a9.835,9.835,0,0,1,2.64,6.72Z" transform="translate(-43.401 -10.184)" fill="#333"/>
+      <path id="Path_1295" data-name="Path 1295" d="M1014.05,897.065a7.258,7.258,0,0,1-1.949,4.96l.888.873a8.526,8.526,0,0,0,0-11.665l-.888.872a7.259,7.259,0,0,1,1.949,4.96Z" transform="translate(-38.741 -14.335)" fill="#333"/>
+      <path id="Path_1296" data-name="Path 1296" d="M1030.37,887.337a13.288,13.288,0,0,1-3.567,9.076l1.625,1.6a15.6,15.6,0,0,0,0-21.342l-1.625,1.6a13.289,13.289,0,0,1,3.567,9.066Z" transform="translate(-48.561 -4.608)" fill="#333"/>
+    </g>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="30" height="30" transform="translate(1700 -711)" fill="none"/>
+  </g>
+</svg>

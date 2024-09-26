@@ -16526,7 +16526,8 @@ ol {
   margin-bottom: 0; }
 
 input, textarea {
-  border: 1px solid #99570F !important; }
+  border-radius: 12px !important;
+  border: 1px solid #ced4da !important; }
   @media (max-width: 576px) {
     input, textarea {
       font-size: 0.9rem !important; } }
@@ -16556,19 +16557,19 @@ select {
   padding-left: 12px; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #adb5bd !important; }
+  color: #212529 !important; }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #adb5bd !important; }
+  color: #212529 !important; }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #adb5bd !important; }
+  color: #212529 !important; }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #adb5bd !important; }
+  color: #212529 !important; }
 
 input::placeholder, textarea::placeholder {
-  color: #adb5bd !important; }
+  color: #212529 !important; }
   @media (max-width: 576px) {
     input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
       font-size: 0.9rem !important; }
@@ -16700,6 +16701,33 @@ input[readonly] {
     width: 16px; }
   @media (max-width: 768px) {
     .basic-btn {
+      font-size: 0.8rem; } }
+
+.cancel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #6c757d;
+  border-radius: 60px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #6c757d;
+  padding: 0; }
+  .cancel-btn:hover {
+    color: #6c757d;
+    border: 2px solid #6c757d;
+    background: #fff; }
+    .cancel-btn:hover img {
+      -webkit-filter: invert(37%) sepia(51%) saturate(758%) hue-rotate(351deg) brightness(70%) contrast(97%);
+              filter: invert(37%) sepia(51%) saturate(758%) hue-rotate(351deg) brightness(70%) contrast(97%); }
+  .cancel-btn img {
+    width: 16px; }
+  @media (max-width: 768px) {
+    .cancel-btn {
       font-size: 0.8rem; } }
 
 /*--------------------主選單開始------------------*/
@@ -18289,6 +18317,204 @@ input[readonly] {
     .tag-white {
       font-size: 0.8rem; } }
 
+.link-underline-primary-light {
+  text-decoration: underline;
+  color: #A25C00; }
+  .link-underline-primary-light:hover {
+    text-decoration: none; }
+
+.link-underline-primary {
+  text-decoration: underline;
+  color: #99570F; }
+  .link-underline-primary:hover {
+    text-decoration: none; }
+
+.link-underline-primary-dark {
+  text-decoration: underline;
+  color: #6e3f0d; }
+  .link-underline-primary-dark:hover {
+    text-decoration: none; }
+
+.link-underline-primary-soft {
+  text-decoration: underline;
+  color: #57B0B7; }
+  .link-underline-primary-soft:hover {
+    text-decoration: none; }
+
+.link-underline-primary-soft-light {
+  text-decoration: underline;
+  color: #D9EDE2; }
+  .link-underline-primary-soft-light:hover {
+    text-decoration: none; }
+
+.link-underline-primary-soft-xlight {
+  text-decoration: underline;
+  color: #EFF6F6; }
+  .link-underline-primary-soft-xlight:hover {
+    text-decoration: none; }
+
+.link-underline-secondary-light {
+  text-decoration: underline;
+  color: #EDE7DA; }
+  .link-underline-secondary-light:hover {
+    text-decoration: none; }
+
+.link-underline-secondary {
+  text-decoration: underline;
+  color: #EDE7DA; }
+  .link-underline-secondary:hover {
+    text-decoration: none; }
+
+.link-underline-secondary-dark {
+  text-decoration: underline;
+  color: #EDE7DA; }
+  .link-underline-secondary-dark:hover {
+    text-decoration: none; }
+
+.link-underline-tertiary {
+  text-decoration: underline;
+  color: #EDCC6C; }
+  .link-underline-tertiary:hover {
+    text-decoration: none; }
+
+.link-underline-quaternary {
+  text-decoration: underline;
+  color: #2D8530; }
+  .link-underline-quaternary:hover {
+    text-decoration: none; }
+
+.link-underline-special-light {
+  text-decoration: underline;
+  color: #BFE1F1; }
+  .link-underline-special-light:hover {
+    text-decoration: none; }
+
+.link-underline-special-xlight {
+  text-decoration: underline;
+  color: #F1FCFC; }
+  .link-underline-special-xlight:hover {
+    text-decoration: none; }
+
+.link-underline-special {
+  text-decoration: underline;
+  color: #70A8D2; }
+  .link-underline-special:hover {
+    text-decoration: none; }
+
+.link-underline-special-dark {
+  text-decoration: underline;
+  color: #276e91; }
+  .link-underline-special-dark:hover {
+    text-decoration: none; }
+
+.link-underline-bright {
+  text-decoration: underline;
+  color: #026EAE; }
+  .link-underline-bright:hover {
+    text-decoration: none; }
+
+.link-underline-success {
+  text-decoration: underline;
+  color: #198754; }
+  .link-underline-success:hover {
+    text-decoration: none; }
+
+.link-underline-gray-100 {
+  text-decoration: underline;
+  color: #f8f9fa; }
+  .link-underline-gray-100:hover {
+    text-decoration: none; }
+
+.link-underline-gray-200 {
+  text-decoration: underline;
+  color: #EFEFEF; }
+  .link-underline-gray-200:hover {
+    text-decoration: none; }
+
+.link-underline-gray-300 {
+  text-decoration: underline;
+  color: #dee2e6; }
+  .link-underline-gray-300:hover {
+    text-decoration: none; }
+
+.link-underline-gray-400 {
+  text-decoration: underline;
+  color: #ced4da; }
+  .link-underline-gray-400:hover {
+    text-decoration: none; }
+
+.link-underline-gray-500 {
+  text-decoration: underline;
+  color: #adb5bd; }
+  .link-underline-gray-500:hover {
+    text-decoration: none; }
+
+.link-underline-gray-600 {
+  text-decoration: underline;
+  color: #6c757d; }
+  .link-underline-gray-600:hover {
+    text-decoration: none; }
+
+.link-underline-gray-700 {
+  text-decoration: underline;
+  color: #495057; }
+  .link-underline-gray-700:hover {
+    text-decoration: none; }
+
+.link-underline-gray-800 {
+  text-decoration: underline;
+  color: #343a40; }
+  .link-underline-gray-800:hover {
+    text-decoration: none; }
+
+.link-underline-gray-900 {
+  text-decoration: underline;
+  color: #212529; }
+  .link-underline-gray-900:hover {
+    text-decoration: none; }
+
+.link-underline-info {
+  text-decoration: underline;
+  color: #0dcaf0; }
+  .link-underline-info:hover {
+    text-decoration: none; }
+
+.link-underline-warning {
+  text-decoration: underline;
+  color: #ffc107; }
+  .link-underline-warning:hover {
+    text-decoration: none; }
+
+.link-underline-danger {
+  text-decoration: underline;
+  color: #dc3545; }
+  .link-underline-danger:hover {
+    text-decoration: none; }
+
+.link-underline-danger-light {
+  text-decoration: underline;
+  color: #BF4C1A; }
+  .link-underline-danger-light:hover {
+    text-decoration: none; }
+
+.link-underline-light {
+  text-decoration: underline;
+  color: #f8f9fa; }
+  .link-underline-light:hover {
+    text-decoration: none; }
+
+.link-underline-dark {
+  text-decoration: underline;
+  color: #212529; }
+  .link-underline-dark:hover {
+    text-decoration: none; }
+
+.link-underline-white {
+  text-decoration: underline;
+  color: #fff; }
+  .link-underline-white:hover {
+    text-decoration: none; }
+
 /*-----------------列表樣式---------------------*/
 .tag-list {
   background: #fff; }
@@ -18521,34 +18747,34 @@ input[readonly] {
       opacity: 0.8; }
 
 /*-----------------視窗樣式---------------------*/
+.modal-dialog {
+  max-width: 600px; }
+
 .modal-header {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: none;
   position: relative;
-  font-size: 1.25rem;
-  font-weight: 600;
+  padding-top: 40px;
   padding-left: 24px;
   padding-right: 24px; }
-  .modal-header:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 24px;
-    bottom: 0;
-    width: calc(100% - 48px);
-    height: 1px;
-    background: #A25C00; }
   .modal-header .btn-close {
-    background: url("../images/ic-close.svg") no-repeat center;
-    background-size: 80%;
+    background: none;
     opacity: 1;
-    text-indent: -9999px;
-    overflow: hidden;
-    white-space: nowrap; }
+    position: absolute;
+    right: 16px;
+    top: 16px; }
     .modal-header .btn-close:hover {
       opacity: 0.8; }
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 4px; }
 
 .modal-content {
   border-radius: 16px !important; }
