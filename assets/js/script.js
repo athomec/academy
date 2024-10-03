@@ -17,13 +17,14 @@ $(function () {//JS開頭
 	})
 
 	//主選單下拉
-	$(".js-nav-item").hover(function () {
-		$('.js-nav-link-dropdown').slideDown();
-	},
+	$(".js-nav-item").hover(
 		function () {
-			$('.js-nav-link-dropdown').slideUp();
-		})
-
+			$(this).find('.js-nav-link-dropdown').stop(true, true).slideDown();
+		},
+		function () {
+			$(this).find('.js-nav-link-dropdown').stop(true, true).slideUp();
+		}
+	);
 	//banner滑鼠滑動
 	$('.carousel-inner').on('mousedown', function (e) {
 		var startX = e.pageX || e.touches[0].pageX;
@@ -44,6 +45,22 @@ $(function () {//JS開頭
 	$(".js-toggle-btn").click(function () {
 		$(this).toggleClass("active");
 	})
+	$(".js-table-btn").click(function () {
+		if ($(this).hasClass("active")) {
+			$(this).text("關閉內容");
+			$(this).parents("tr").next("tr").slideDown();
+		} else {
+			$(this).text("開啟內容");
+			$(this).parents("tr").next("tr").slideUp();
+		}
+	});
+	$(".js-like-btn").click(function () {
+		if ($(this).hasClass("active")) {
+			$(this).text("不感興趣");
+		} else {
+			$(this).text("我感興趣");
+		}
+	});
 	$(".js-dropdown-menu").find("a").click(function () {
 		$(this).toggleClass("active");
 		$(".js-dropdown-menu").find("a").not(this).removeClass("active");

@@ -49,24 +49,33 @@
                         <a class="nav-link" href="#" title="關於學院">關於學院</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="主題課程">主題課程</a>
+                        <a class="nav-link" href="theme.html" title="主題課程">主題課程</a>
                     </li>
                     <li class="nav-item js-nav-item">
                         <a class="nav-link" href="#" title="學習資源">學習資源</a>
                         <div class="nav-item-dropdown js-nav-link-dropdown">
                             <ul>
-                                <li class="nav-item-dropdown-item"><a href="#" class="nav-item-dropdown-link">電子書</a></li>
-                                <li class="nav-item-dropdown-item"><a href="#" class="nav-item-dropdown-link">影音專區</a></li>
+                                <li class="nav-item-dropdown-item"><a href="resource.html" class="nav-item-dropdown-link" title="電子書">電子書</a></li>
+                                <li class="nav-item-dropdown-item"><a href="resource.html#video" class="nav-item-dropdown-link" title="影音專區">影音專區</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" title="培訓地圖">培訓地圖</a>
                     </li>
+                    <li class="nav-item js-nav-item d-none">
+                        <a class="nav-link" href="#" title="學員專區">學員專區</a>
+                        <div class="nav-item-dropdown js-nav-link-dropdown">
+                            <ul>
+                                <li class="nav-item-dropdown-item"><a href="course.html" class="nav-item-dropdown-link" title="我的課程">我的課程</a></li>
+                                <li class="nav-item-dropdown-item"><a href="info.html" class="nav-item-dropdown-link" title="個人資料">個人資料</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" title="網站導覽">網站導覽</a>
                     </li>
-                    <li class="nav-item px-2 px-xl-4 d-none d-lg-flex">
+                    <li class="nav-item px-2 px-xl-3 px-xxl-4 d-none d-xl-flex">
                         <p class="ms-auto me-2 text-primary fw-medium">字級</p>
                         <ul class="top-function-list js-top-function" role="tablist">
                             <li class="top-function-list-item">
@@ -411,7 +420,7 @@
 				最新課程
 			</h2>
 			<div class="d-flex justify-content-end mb-3">
-				<a href="#" title="查看更多開課資訊" class="d-flex align-items-center border-bottom border-primary fw-medium">
+				<a href="new.html" title="查看更多開課資訊" class="d-flex align-items-center border-bottom border-primary fw-medium">
 					查看更多開課資訊 <img src="./assets/images/ic-triangle.svg" alt="icon" class="ms-2">
 				</a>
 			</div>
@@ -1122,6 +1131,43 @@
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         rows: 1,
+                    }
+                }
+            ]
+        });
+        //電子書輪播
+        $('.js-book-slide').slick({
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            rows: 1,
+            dots: false,
+             arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        rows: 1,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 485,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        rows: 1,
+                        arrows: true,
                     }
                 }
             ]
