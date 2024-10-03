@@ -15,7 +15,16 @@ $(function () {//JS開頭
 		$(this).addClass("active");
 		return false;
 	})
-
+	//主選單陰影
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) { //若目前的位置距離網頁頂端>100px
+			//$(".gotop").fadeIn("fast");
+			$(".js-nav ").addClass("scroll");
+		} else {
+			//$(".gotop").stop().fadeOut("fast");
+			$(".js-nav ").removeClass("scroll");
+		}
+	});
 	//主選單下拉
 	$(".js-nav-item").hover(
 		function () {

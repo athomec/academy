@@ -55,9 +55,10 @@
                         <a class="nav-link" href="#" title="學習資源">學習資源</a>
                         <div class="nav-item-dropdown js-nav-link-dropdown">
                             <ul>
-                                <li class="nav-item-dropdown-item"><a href="resource.html" class="nav-item-dropdown-link" title="電子書">電子書</a></li>
-                                <li class="nav-item-dropdown-item"><a href="resource.html#video" class="nav-item-dropdown-link" title="影音專區">影音專區</a></li>
+                                <li class="nav-item-dropdown-item"><a href="resource.html#" class="nav-item-dropdown-link" title="電子書">電子書</a></li>
+                                <li class="nav-item-dropdown-item"><a href="resource.html#video" class="nav-item-dropdown-link" title="影音專區" onclick="scrollToVideo(event)">影音專區</a></li>
                             </ul>
+                            
                         </div>
                     </li>
                     <li class="nav-item">
@@ -121,12 +122,12 @@
 </div>
 <main class="main" data-con="page">
     <div class="container">
-        <div class="d-flex align-items-center">
-        <ul class="d-flex filter-list mb-4" data-position="out">
+        <div class="d-flex align-items-center flex-wrap mb-3">
+        <ul class="filter-list pt-1 pb-2 mb-2 scrollbar" data-position="out">
             <li><a href="#" class="btn filter-list-btn px-4 me-2" title="已報名(目前分類)">已報名</a></li>
-            <li><a href="course.html" class="btn filter-list-btn px-4 me-2 active" title="培訓中分類">培訓中</a></li>
-            <li><a href="#" class="btn filter-list-btn px-4 me-2" title="已結業(學習歷程)分類">已結業(學習歷程)</a></li>
-            <li><a href="#" class="btn filter-list-btn px-4" title="感興趣分類">感興趣</a></li>
+            <li><a href="course.html" class="btn filter-list-btn px-4 me-2 active" title="培訓中">培訓中</a></li>
+            <li><a href="#" class="btn filter-list-btn px-4 me-2" title="已結業(學習歷程)">已結業(學習歷程)</a></li>
+            <li><a href="#" class="btn filter-list-btn px-4" title="感興趣">感興趣</a></li>
         </ul>
             <a href="info.html" title="查看個人資料" class="d-flex align-items-center fw-medium ms-auto">
                 <img src="./assets/images/ic-setting.svg" alt="icon" class="me-2"> 個人資料
