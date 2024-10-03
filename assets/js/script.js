@@ -34,6 +34,24 @@ $(function () {//JS開頭
 			$(this).find('.js-nav-link-dropdown').stop(true, true).slideUp();
 		}
 	);
+	//學習資源錨點
+	// 檢查 URL 中是否包含 #video
+	if (window.location.hash === "#video") {
+		setTimeout(() => {
+			const element = document.getElementById('video');
+			const offset = 50; // 往上調整的距離
+			const bodyRect = document.body.getBoundingClientRect().top;
+			const elementRect = element.getBoundingClientRect().top;
+			const elementPosition = elementRect - bodyRect;
+			const offsetPosition = elementPosition - offset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'  // 平滑捲動
+			});
+		}, 100);  // 延遲 100 毫秒以確保頁面完全載入
+	}
+
 	//banner滑鼠滑動
 	$('.carousel-inner').on('mousedown', function (e) {
 		var startX = e.pageX || e.touches[0].pageX;
