@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" viewBox="0 0 30 60">
+  <g id="ic-circle-btn" transform="translate(-865 263)">
+    <g id="ic-close-circle" transform="translate(-75 -1733.839)">
+      <circle id="Ellipse_19" data-name="Ellipse 19" cx="15" cy="15" r="15" transform="translate(940 1500.839)" fill="#b4cb97"/>
+      <line id="Line_4" data-name="Line 4" x2="12" transform="translate(949 1515.839)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="ic-open-circle" transform="translate(-75 -1763.839)">
+      <circle id="Ellipse_19-2" data-name="Ellipse 19" cx="15" cy="15" r="15" transform="translate(940 1500.839)" fill="#b4cb97"/>
+      <line id="Line_4-2" data-name="Line 4" x2="12" transform="translate(949 1515.839)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_5" data-name="Line 5" x2="12" transform="translate(955 1509.839) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
