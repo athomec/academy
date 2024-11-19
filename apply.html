@@ -80,7 +80,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="培訓地圖">培訓地圖</a>
+                        <a class="nav-link" href="map.html" title="培訓地圖">培訓地圖</a>
                     </li>
                     <li class="nav-item js-nav-item ">
                         <a class="nav-link" href="#" title="學員專區">學員專區</a>
@@ -600,11 +600,101 @@
                 }
             ]
         });
+        
+        //培訓地圖表格
+        $(".js-time-card").click(function (e) {
+            e.preventDefault(); // 阻止預設行為
+
+            $(this).find(".js-time-list").slideToggle(); // 切換下拉效果
+            $(this).toggleClass("open"); // 切換樣式
+
+            // 更新 title 屬性
+            $(this).attr("title", $(this).hasClass("open") ? "收合內容" : "展開內容");
+
+            let target = $(this).attr("data-color"); // 獲取 data-color 的值
+            let nextRow = $(this).parents("tr").next("tr"); // 開始從下一個 <tr> 開始
+
+            while (nextRow.length > 0) { // 確保還有下一個 <tr>
+                let targetElement = nextRow.find('[data-color="' + target + '"]'); // 查找目標元素
+
+                if (targetElement.length > 0) { // 如果找到目標元素
+                    if (targetElement.html().trim()) { // 如果目標元素有內容
+                        targetElement.toggleClass("showcontent"); // 切換樣式
+                        break; // 停止循環
+                    } else {
+                        targetElement.toggleClass("nocontent"); // 如果內容為空，添加 nocontent 樣式
+                    }
+                }
+                nextRow = nextRow.next("tr"); // 繼續查找下一個 <tr>
+            }
+
+            console.log('[data-color="' + target + '"]');
+        });
+
+
+
+        $(".js-course-toggler").click(function (e) {
+            e.preventDefault(); // 阻止預設行為
+
+            const $currentRow = $(this).parents("tr"); // 當前的 <tr>
+            const $targetCourses = $currentRow.next(".js-courses"); // 找到相鄰的 .js-courses 行
+
+            // 移除所有 .js-time-card 上的 endcontent 和 showcontent 樣式
+            $(".js-time-card").removeClass("endcontent showcontent");
+
+            // 先關閉所有其他的 .js-courses 行
+            $(".js-courses")
+                .not($targetCourses)
+                .slideUp()
+                .prev()
+                .find(".js-course-toggler")
+                .removeClass("open")
+                .attr("title", "展開內容"); // 更新title為"展開內容"
+
+            // 展開當前的 .js-courses 行
+            if ($targetCourses.length > 0) {
+                $targetCourses.slideToggle(() => {
+                    // 在切換完成後移除相關樣式
+                    if (!$targetCourses.is(":visible")) {
+                        // 当前的 .js-courses 被收合时，移除样式
+                        $currentRow.find(".js-time-card").removeClass("endcontent");
+                        const $nextRow = $targetCourses.next("tr");
+                        if ($nextRow.length > 0) {
+                            $nextRow.find(".js-time-card").removeClass("showcontent");
+                        }
+                    }
+                });
+
+                $(this).toggleClass("open"); // 切換按鈕的樣式
+
+                // 更新 .js-course-toggler 的 title
+                $(this).attr("title", $(this).hasClass("open") ? "收合內容" : "展開內容");
+
+                // 為 .js-courses 開啟時，先關閉所有 .js-time-card 裡的 .js-time-list 並移除 open 樣式
+                if ($targetCourses.is(":visible")) {
+                    $(".js-time-card .js-time-list").slideUp(); // 關閉所有 .js-time-list
+                    $(".js-time-card").removeClass("open").attr("title", "展開內容"); // 移除open樣式並更新title
+
+                    // 為 .js-courses 前的 <tr> 內的 .js-time-card 添加 endcontent 樣式
+                    $currentRow.find(".js-time-card").addClass("endcontent").attr("title", "收合內容");
+
+                    // 為 .js-courses 後的 <tr> 內的 .js-time-card 添加 showcontent 樣式
+                    const $nextRow = $targetCourses.next("tr");
+                    if ($nextRow.length > 0) {
+                        $nextRow.find(".js-time-card").addClass("showcontent");
+                    }
+                }
+            }
+        });
+
+        
+        
         RESIZE();
 
         function RESIZE() {
             WINDOWH = $(window).height();
             WINDOW = $(window).width();
+            
             if (WINDOW < 769) {
                $('.js-link-card-list').slick({
                     speed: 300,
