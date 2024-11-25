@@ -577,6 +577,24 @@
             ]
         });
         
+        //培訓地圖圖示控制表格
+        $('.js-scroll-link').on('click', function (e) {
+            e.preventDefault(); // 阻止預設行為
+
+            var targetId = $(this).data('target'); // 取得目標 ID
+            var $scrollable = $('#scrollable'); // 滾動區域
+            var $target = $('#' + targetId); // 目標元素
+
+            if ($scrollable.length && $target.length) {
+                var offsetLeft = $target.position().left; // 計算目標相對滾動區域的位置
+                var offset = window.innerWidth > 768 ? 174 : 115; // 動態設定偏移量
+                var adjustedOffset = Math.max(0, offsetLeft - offset); // 確保滾動位置不小於 0
+                $scrollable.animate({ scrollLeft: adjustedOffset }, 500); // 動畫滾動到指定位置
+            }
+            var scrollableTop = $scrollable.offset().top; // 計算 scrollable 的頂部位置
+            var adjustedTop = scrollableTop - 90; // 加上偏移量
+            $('html, body').animate({ scrollTop: adjustedTop }, 500);
+        });
         //培訓地圖表格
         $(".js-time-card").click(function (e) {
             e.preventDefault(); // 阻止預設行為
@@ -606,6 +624,7 @@
 
             console.log('[data-color="' + target + '"]');
         });
+
 
 
 

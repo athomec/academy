@@ -146,7 +146,7 @@
             <div class="bg-white rounded-3 p-3 p-md-5">
                 <div class="row justify-content-center pt-4 pt-xxl-5 mb-5">
                     <div class="col-sm-6 col-lg-4">
-                        <div class="illustration-card">
+                        <div class="illustration-card js-scroll-link" data-target="style1">
                             <h3 class="illustration-card-title">對農村生活嚮往族群</h3>
                             <img src="./assets/images/map-p1.png" alt="插圖" class="illustration-card-pic">
                             <h4 class="illustration-card-subtitle">農村再生的引路課</h4>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="illustration-card">
+                        <div class="illustration-card js-scroll-link" data-target="style2">
                             <h3 class="illustration-card-title">回鄉青年</h3>
                             <img src="./assets/images/map-p2.png" alt="插圖" class="illustration-card-pic">
                             <h4 class="illustration-card-subtitle">農村合作共創課程</h4>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="illustration-card">
+                        <div class="illustration-card js-scroll-link" data-target="style3">
                             <h3 class="illustration-card-title">農村組織經營人才</h3>
                             <img src="./assets/images/map-p3.png" alt="插圖" class="illustration-card-pic">
                             <h4 class="illustration-card-subtitle">農村經營管理課程</h4>
@@ -176,14 +176,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="table-responsive scrollbar">
+                <div class="table-responsive scrollbar" id="scrollable">
                 <table class="table table-combo table-bordered mb-0">
                     <thead>
                         <tr class="fw-semibold">
                             <th scope="col" colspan="2" class="bg-white"></th>
-                            <th scope="col" class="type-col bg-danger-xlight">農村組織經營人才</th>
-                            <th scope="col" class="type-col bg-quaternary-light">回鄉青年</th>
-                            <th scope="col" class="type-col bg-tertiary-light">對農村生活嚮往族群</th>
+                            <th scope="col" class="type-col bg-danger-xlight" id="style3">農村組織經營人才</th>
+                            <th scope="col" class="type-col bg-quaternary-light" id="style2">回鄉青年</th>
+                            <th scope="col" class="type-col bg-tertiary-light" id="style1">對農村生活嚮往族群</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -698,6 +698,24 @@
             ]
         });
         
+        //培訓地圖圖示控制表格
+        $('.js-scroll-link').on('click', function (e) {
+            e.preventDefault(); // 阻止預設行為
+
+            var targetId = $(this).data('target'); // 取得目標 ID
+            var $scrollable = $('#scrollable'); // 滾動區域
+            var $target = $('#' + targetId); // 目標元素
+
+            if ($scrollable.length && $target.length) {
+                var offsetLeft = $target.position().left; // 計算目標相對滾動區域的位置
+                var offset = window.innerWidth > 768 ? 174 : 115; // 動態設定偏移量
+                var adjustedOffset = Math.max(0, offsetLeft - offset); // 確保滾動位置不小於 0
+                $scrollable.animate({ scrollLeft: adjustedOffset }, 500); // 動畫滾動到指定位置
+            }
+            var scrollableTop = $scrollable.offset().top; // 計算 scrollable 的頂部位置
+            var adjustedTop = scrollableTop - 90; // 加上偏移量
+            $('html, body').animate({ scrollTop: adjustedTop }, 500);
+        });
         //培訓地圖表格
         $(".js-time-card").click(function (e) {
             e.preventDefault(); // 阻止預設行為
@@ -727,6 +745,7 @@
 
             console.log('[data-color="' + target + '"]');
         });
+
 
 
 
